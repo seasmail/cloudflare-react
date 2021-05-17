@@ -1,4 +1,4 @@
-import { Transaction } from './interface';
+import { Transaction } from '../interface';
 
 export const MOCK_TRANSACTIONS: Transaction[] = [
   {
