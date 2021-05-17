@@ -8,7 +8,7 @@ import { BlockProps } from './interface';
 import './Block.css';
 
 export const Block: FunctionComponent<BlockProps> = ({ number, hash, className= '' }) => <div>
-  <Card style={{width: '20rem'}} className={className}>
+  {(number && hash) ? <Card style={{width: '20rem'}} className={className}>
     <Card.Title>Block {+number}</Card.Title>
     <Card.Body className="info">
       <div>
@@ -18,5 +18,5 @@ export const Block: FunctionComponent<BlockProps> = ({ number, hash, className= 
         <span className="bold">Hash:</span> {truncate(hash)};
       </div>
     </Card.Body>
-  </Card>
+  </Card> : <span>No correct info about block</span>}
 </div>
