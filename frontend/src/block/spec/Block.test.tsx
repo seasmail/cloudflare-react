@@ -6,7 +6,7 @@ import { render, screen } from '@testing-library/react';
 
 import { truncate } from '../../utils';
 
-import { Block } from '../Block';
+import Block from '../Block';
 
 import { MOCK_BLOCKPROPS } from './mocks';
 

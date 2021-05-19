@@ -4,7 +4,8 @@ import React from 'react';
 
 import { render, screen } from '@testing-library/react';
 
-import { TransactionTable } from '../TransactionTable';
+import TransactionTable from '../TransactionTable';
+
 import { MOCK_TRANSACTIONS } from './mocks';
 
 test('no table if no transactions', () => {
