@@ -36,7 +36,7 @@ const App = (): JSX.Element => {
   }
 
   const isEnable = (): boolean => {
-    return !!input && (+input > 0);
+    return !!input && ((+input > 0) || input.toLowerCase() === 'latest');
   }
 
   const setResult = (data: { result: React.SetStateAction<{ number: string; hash: string; transactions: never[]; }>; }) => {
@@ -67,7 +67,7 @@ const App = (): JSX.Element => {
     <div className="App">
       <div className="content">
         <FormComponent
-          handleSubmit={() => handleSubmit}
+          handleSubmit={(e: React.FormEvent) => handleSubmit(e)}
           input={input}
           setInput={setInput}
           onError={onError}

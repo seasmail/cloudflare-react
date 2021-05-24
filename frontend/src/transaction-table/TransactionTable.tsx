@@ -5,7 +5,6 @@ import Table from 'react-bootstrap/Table';
 import { truncate } from '../utils';
 
 import { TransactionProps } from './interface';
-import './TransactionTable.css';
 
 const TransactionTable: FunctionComponent<TransactionProps> = (
   { transactions }: TransactionProps
@@ -20,8 +19,8 @@ const TransactionTable: FunctionComponent<TransactionProps> = (
       </tr>
       </thead>
       <tbody>
-        {transactions.map((value, index) => {
-          return <tr key={index}>
+        {transactions.map((value) => {
+          return <tr key={value.hash}>
               <td>{value.hash && truncate(value.hash)}</td>
               <td>{value.from && truncate(value.from)}</td>
               <td>{value.to && truncate(value.to)}</td>
