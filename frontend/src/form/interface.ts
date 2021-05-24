@@ -1,5 +1,7 @@
+import React from 'react';
+
 export interface FormComponentProps {
-  handleSubmit: () => any;
+  handleSubmit: (e: React.FormEvent) => any;
   input: string;
   setInput: (value: string) => any;
   onError: string;
